@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // true -> Nested Objects (allowed)
 // false -> Nested Objects(not allowed)
 
-const mongoConnectionString = "mongodb+srv://srijanbanerjee:football1234@cluster0.aqb1kjr.mongodb.net/notesdb";
+const mongoConnectionString = "mongodb+srv://<username>:<password>@cluster0.aqb1kjr.mongodb.net/notes.db";
 mongoose.connect(mongoConnectionString).then(function()
 {
     // Define App routes
