@@ -22,7 +22,7 @@ class _AddNewNoteState extends State<AddNewNote> {
   void addNewNote() {
     Note note = Note(
       id: Uuid().v1(), //unique id will be assigned
-      userid: "admin",
+      userid: "srijanbanerjee",
       title: titleController.text,
       content: contentController.text,
       dateadded: DateTime.now(),

@@ -40,10 +40,7 @@ class _HomePageState extends State<HomePage> {
                               });
                             },
                             decoration: InputDecoration(
-                              suffixIcon: IconButton(
-                                icon: Icon(Icons.search),
-                                onPressed: () {},
-                              ),
+                              suffixIcon: Icon(Icons.search),
                               hintText: "Search",
                               // filled: true,
                               // fillColor: Color(0xffc0d59e),

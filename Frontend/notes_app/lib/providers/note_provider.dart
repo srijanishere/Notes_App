@@ -51,7 +51,7 @@ class NoteProvider with ChangeNotifier {
   }
 
   void fetchNotes() async {
-    notes = await ApiService.fetchNotes("admin");
+    notes = await ApiService.fetchNotes("srijanbanerjee");
     sortNotes();
     isLoading = false;
     notifyListeners();
