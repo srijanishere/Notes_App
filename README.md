@@ -1,8 +1,7 @@
 # Notes App using Flutter, Node.js and MongoDB
 
-A simple, clean, effective UI combined with all the CRUD functionalities, this app provides the user an effective platform to write and store their notes
+A simple, clean, effective UI coupled with effective functionalities, this app provides the user a platform to write and store their notes on the go.
 
-<br>
 <br>
 
 ## Features
