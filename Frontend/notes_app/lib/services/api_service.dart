@@ -25,6 +25,7 @@ class ApiService {
     Uri requestUri = Uri.parse(_baseURL + "/list");
     var response = await http.post(requestUri, body: {"userid": userid});
     // print(response.reasonPhrase);
+    print(response.body);
     var decodedResponse = jsonDecode(response.body);
     List<Note> notes = [];
     for (var noteMap in decodedResponse) {
