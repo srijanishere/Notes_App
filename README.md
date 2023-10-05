@@ -14,6 +14,6 @@ Here are the current features of the app :
 ## Tech Stack
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=flutter,dart,nodejs,mongodb" />
+    <img src="https://skillicons.dev/icons?i=flutter,dart,nodejs,mongodb,expressjs" />
   </a>
 </p> 
