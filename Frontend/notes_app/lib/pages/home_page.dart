@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
                               });
                             },
                             style: TextStyle(
+                              fontFamily: 'SpaceMono',
                               color: Colors.black,
                             ),
                             decoration: InputDecoration(
@@ -62,7 +63,10 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 48, 50, 102),
                               ),
                               hintText: "Search",
-                              hintStyle: TextStyle(fontWeight: FontWeight.bold),
+                              hintStyle: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'SpaceMono',
+                              ),
                               filled: true,
                               fillColor: Colors.white,
                               focusColor: Color(0xffc0d59e),
@@ -130,6 +134,7 @@ class _HomePageState extends State<HomePage> {
                                             overflow: TextOverflow.ellipsis,
                                             style: const TextStyle(
                                               color: Colors.black,
+                                              fontFamily: 'SpaceMono',
                                               fontWeight: FontWeight.w800,
                                               fontSize: 25.0,
                                             ),
@@ -168,6 +173,7 @@ class _HomePageState extends State<HomePage> {
                                         'No results for "$searchQuery"',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
+                                          fontFamily: 'SpaceMono',
                                           fontSize: 24.0,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black,
@@ -179,6 +185,7 @@ class _HomePageState extends State<HomePage> {
                                       Text(
                                         'Check the spelling or try a new search',
                                         style: TextStyle(
+                                          fontFamily: 'SpaceMono',
                                           color: Colors.black,
                                         ),
                                       ),
@@ -191,7 +198,10 @@ class _HomePageState extends State<HomePage> {
                   : Center(
                       child: Text(
                         'No notes yet',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(
+                          fontFamily: 'SpaceMono',
+                          color: Colors.white,
+                        ),
                       ),
                     ),
             )

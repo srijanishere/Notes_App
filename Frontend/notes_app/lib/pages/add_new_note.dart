@@ -87,6 +87,7 @@ class _AddNewNoteState extends State<AddNewNote> {
                   }
                 },
                 style: const TextStyle(
+                  fontFamily: 'SpaceMono',
                   fontSize: 25.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -121,6 +122,7 @@ class _AddNewNoteState extends State<AddNewNote> {
                   focusNode: noteFocus,
                   maxLines: null,
                   style: const TextStyle(
+                    fontFamily: 'SpaceMono',
                     fontSize: 15.0,
                   ),
                   decoration: InputDecoration(
