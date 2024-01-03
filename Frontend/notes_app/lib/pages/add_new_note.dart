@@ -53,7 +53,9 @@ class _AddNewNoteState extends State<AddNewNote> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFE6E7E9),
       appBar: AppBar(
+        backgroundColor: Color(0xff0166B1),
         actions: [
           IconButton(
             onPressed: () {
@@ -89,13 +91,23 @@ class _AddNewNoteState extends State<AddNewNote> {
                   fontWeight: FontWeight.bold,
                 ),
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
                   hintText: "Title",
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                        style: BorderStyle.solid,
+                        color: Colors.black,
+                        width: 3),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   // filled: true,
                   // fillColor: Color(0xffc0d59e),
                   border: OutlineInputBorder(
                     borderSide: const BorderSide(
-                      style: BorderStyle.solid,
-                    ),
+                        style: BorderStyle.solid,
+                        color: Colors.black,
+                        width: 3),
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
@@ -112,11 +124,20 @@ class _AddNewNoteState extends State<AddNewNote> {
                     fontSize: 15.0,
                   ),
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     hintText: "Note",
                     // filled: true,
                     // fillColor: Color(0xffc0d59e),
                     border: OutlineInputBorder(
                       borderSide: const BorderSide(style: BorderStyle.solid),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(
+                          style: BorderStyle.solid,
+                          color: Colors.black,
+                          width: 3),
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),

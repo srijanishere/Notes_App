@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
       //   backgroundColor: Colors.grey[900],
       //   centerTitle: true,
       // ),
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFFE6E7E9),
       body: (noteProvider.isLoading == false)
           ? SafeArea(
               child: (noteProvider.notes.isNotEmpty)
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                               });
                             },
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                             decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                               hintText: "Search",
                               hintStyle: TextStyle(fontWeight: FontWeight.bold),
                               filled: true,
-                              fillColor: Color(0xff5D5E7D),
+                              fillColor: Colors.white,
                               focusColor: Color(0xffc0d59e),
                               border: OutlineInputBorder(
                                 borderSide: const BorderSide(
@@ -112,11 +112,11 @@ class _HomePageState extends State<HomePage> {
                                       margin: const EdgeInsets.all(10.0),
                                       padding: const EdgeInsets.all(10.0),
                                       decoration: BoxDecoration(
-                                        color: Color(0xff9094D3),
+                                        color: Colors.white,
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                         border: Border.all(
-                                          color: Color(0xff9094D3),
+                                          color: Colors.black,
                                           width: 3,
                                         ),
                                       ),
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
                                             style: const TextStyle(
-                                              color: Colors.white,
+                                              color: Colors.black,
                                               fontWeight: FontWeight.w800,
                                               fontSize: 25.0,
                                             ),
@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                                       Icon(
                                         Icons.search_rounded,
                                         size: 60,
-                                        color: Colors.white,
+                                        color: Colors.black,
                                       ),
                                       SizedBox(
                                         height: 20.0,
@@ -170,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                                         style: TextStyle(
                                           fontSize: 24.0,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                       ),
                                       SizedBox(
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                                       Text(
                                         'Check the spelling or try a new search',
                                         style: TextStyle(
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                       ),
                                     ],
@@ -189,7 +189,10 @@ class _HomePageState extends State<HomePage> {
                       ],
                     )
                   : Center(
-                      child: Text('No notes yet'),
+                      child: Text(
+                        'No notes yet',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
             )
           : Center(
@@ -199,7 +202,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xffFCFF61),
+        backgroundColor: Color(0xff0166B1),
         onPressed: () {
           Navigator.push(
             context,
@@ -210,8 +213,8 @@ class _HomePageState extends State<HomePage> {
           );
         },
         child: Icon(
-          Icons.add,
-          color: Colors.black,
+          Icons.edit_outlined,
+          color: Colors.white,
         ),
       ),
     );
