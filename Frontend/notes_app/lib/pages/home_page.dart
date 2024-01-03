@@ -20,18 +20,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     NoteProvider noteProvider = Provider.of<NoteProvider>(context);
+    int size = noteProvider.notes.length;
 
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text(
-      //     "Notes App",
-      //     style: TextStyle(
-      //       color: Colors.orange,
-      //     ),
-      //   ),
-      //   backgroundColor: Colors.grey[900],
-      //   centerTitle: true,
-      // ),
+      appBar: AppBar(
+        elevation: 0,
+        title: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Notes($size)',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 30,
+              // fontWeight: FontWeight.bold,
+              fontFamily: 'SpaceMono',
+            ),
+          ),
+        ),
+        backgroundColor: Color(0xFFE6E7E9),
+        centerTitle: false,
+      ),
       backgroundColor: Color(0xFFE6E7E9),
       body: (noteProvider.isLoading == false)
           ? SafeArea(
@@ -142,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                                           const SizedBox(height: 10),
                                           Text(
                                             currentNote.content!,
-                                            maxLines: 6,
+                                            maxLines: 4,
                                             overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
                                               fontSize: 15.0,
@@ -212,7 +220,11 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xff0166B1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+          side: BorderSide(width: 3, color: Colors.black),
+        ),
+        backgroundColor: Colors.white,
         onPressed: () {
           Navigator.push(
             context,
@@ -224,7 +236,7 @@ class _HomePageState extends State<HomePage> {
         },
         child: Icon(
           Icons.edit_outlined,
-          color: Colors.white,
+          color: Colors.black,
         ),
       ),
     );

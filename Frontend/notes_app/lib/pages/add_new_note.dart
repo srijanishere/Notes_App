@@ -28,9 +28,14 @@ class _AddNewNoteState extends State<AddNewNote> {
       dateadded: DateTime.now(),
     );
 
-    Provider.of<NoteProvider>(context, listen: false).addNote(
-        note); //if you're calling it outside a build function then listen: false needs to be mentioned
-    Navigator.pop(context);
+    if (titleController.text.length == 0 ||
+        contentController.text.length == 0) {
+      Navigator.pop(context);
+    } else {
+      Provider.of<NoteProvider>(context, listen: false).addNote(
+          note); //if you're calling it outside a build function then listen: false needs to be mentioned
+      Navigator.pop(context);
+    }
   }
 
   void updateNote() {
@@ -55,21 +60,58 @@ class _AddNewNoteState extends State<AddNewNote> {
     return Scaffold(
       backgroundColor: Color(0xFFE6E7E9),
       appBar: AppBar(
-        backgroundColor: Color(0xff0166B1),
+        title: Text(
+          'Edit',
+          style: TextStyle(
+            fontFamily: 'SpaceMono',
+            fontSize: 20,
+          ),
+        ),
+        // backgroundColor: Color(0xff0166B1),
+        backgroundColor: Color(0xFF1d1f1d),
         actions: [
-          IconButton(
-            onPressed: () {
-              if (widget.isUpdate) {
-                updateNote();
-              } else {
-                addNewNote();
-              }
-            },
-            icon: Icon(
-              Icons.check_circle_outlined,
-              size: 30.0,
+          // IconButton(
+          //   color: Color(0xFFE5FA5B),
+          //   onPressed: () {
+          //     if (widget.isUpdate) {
+          //       updateNote();
+          //     } else {
+          //       addNewNote();
+          //     }
+          //   },
+          //   icon: Icon(
+          //     Icons.check_circle_outlined,
+          //     size: 30.0,
+          //   ),
+          // )
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color(0xFFE5FA5B)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    side: BorderSide(
+                      width: 3,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+              onPressed: () {
+                if (widget.isUpdate) {
+                  updateNote();
+                } else {
+                  addNewNote();
+                }
+              },
+              child: Icon(
+                Icons.arrow_forward,
+                color: Colors.black,
+              ),
             ),
-          )
+          ),
         ],
       ),
       body: SafeArea(
