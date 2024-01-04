@@ -61,7 +61,7 @@ class _AddNewNoteState extends State<AddNewNote> {
       backgroundColor: Color(0xFFE6E7E9),
       appBar: AppBar(
         title: Text(
-          'Edit',
+          'Create/Edit',
           style: TextStyle(
             fontFamily: 'SpaceMono',
             fontSize: 20,
@@ -88,7 +88,7 @@ class _AddNewNoteState extends State<AddNewNote> {
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Color(0xFFE5FA5B)),
+                backgroundColor: MaterialStateProperty.all(Color(0xFFf0e69c)),
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),

@@ -62,7 +62,13 @@ class _HomePageState extends State<HomePage> {
                             decoration: InputDecoration(
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xff5D5E7D),
+                                  color: Colors.black,
+                                ),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.white,
                                 ),
                                 borderRadius: BorderRadius.circular(15),
                               ),
@@ -81,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                               border: OutlineInputBorder(
                                 borderSide: const BorderSide(
                                   style: BorderStyle.solid,
-                                  color: Colors.black,
+                                  color: Colors.white,
                                 ),
                                 borderRadius: BorderRadius.circular(15),
                               ),
@@ -124,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                                       margin: const EdgeInsets.all(10.0),
                                       padding: const EdgeInsets.all(10.0),
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
+                                        color: Color(0xFFf0e9b4),
                                         borderRadius:
                                             BorderRadius.circular(20.0),
                                         border: Border.all(
@@ -215,7 +221,7 @@ class _HomePageState extends State<HomePage> {
             )
           : Center(
               child: LoadingAnimationWidget.stretchedDots(
-                color: Colors.purple,
+                color: Colors.black,
                 size: 100,
               ),
             ),
