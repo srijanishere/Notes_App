@@ -170,7 +170,7 @@ class _AddNewNoteState extends State<AddNewNote> {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
-                    hintText: "Note",
+                    hintText: "Write your notes here",
                     // filled: true,
                     // fillColor: Color(0xffc0d59e),
                     border: OutlineInputBorder(
